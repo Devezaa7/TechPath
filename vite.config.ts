@@ -18,6 +18,16 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks: undefined
+          }
+        }
+      },
+      optimizeDeps: {
+        include: ['react', 'react-dom', 'lucide-react', '@google/genai']
       }
     };
 });
