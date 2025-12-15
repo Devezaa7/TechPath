@@ -1,10 +1,9 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 import { RoadmapItem, PortfolioAnalysisResult, Job } from "../types";
 import { getFallbackRoadmap, MOCK_JOBS } from "../constants";
 import { Language } from "../types";
 
-const apiKey = process.env.API_KEY || ''; 
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY || ''; 
 
 const ai = new GoogleGenAI({ apiKey });
 
